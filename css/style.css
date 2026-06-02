@@ -1,0 +1,727 @@
+/* =====================================================
+   RESIDENCE ELECTRONIC VOTING SYSTEM
+   MASTER STYLESHEET
+   Colors:
+   Gold      #FFD700
+   LightBlue #87CEFA
+   Black     #111111
+===================================================== */
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root{
+    --gold:#FFD700;
+    --light-blue:#87CEFA;
+    --black:#111111;
+    --white:#FFFFFF;
+    --background:#F4F8FC;
+    --gray:#E5E7EB;
+
+    --shadow:
+    0 8px 25px rgba(0,0,0,.10);
+
+    --radius:15px;
+
+    --transition:0.3s ease;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--background);
+    color:var(--black);
+    min-height:100vh;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    background:var(--black);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 40px;
+
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.logo{
+    color:var(--gold);
+
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo i{
+    margin-right:8px;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    color:var(--light-blue);
+    font-weight:500;
+    transition:var(--transition);
+}
+
+nav ul li a:hover{
+    color:var(--gold);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+header{
+    min-height:90vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.7),
+        rgba(0,0,0,.7)
+    ),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.overlay{
+    color:white;
+    max-width:900px;
+    padding:20px;
+}
+
+.overlay h1{
+    color:var(--gold);
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.overlay p{
+    font-size:1.2rem;
+    line-height:1.6;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button,
+.btn{
+
+    border:none;
+    outline:none;
+
+    padding:14px 25px;
+
+    cursor:pointer;
+
+    border-radius:10px;
+
+    background:var(--light-blue);
+
+    font-weight:bold;
+
+    transition:var(--transition);
+}
+
+button:hover,
+.btn:hover{
+
+    transform:translateY(-2px);
+
+    background:var(--gold);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+/* =========================
+   REGISTRATION PAGE
+========================= */
+
+.register-container{
+
+    width:100%;
+    max-width:550px;
+
+    margin:80px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+}
+
+.register-container h1{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    color:var(--gold);
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+}
+
+input,
+select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+    font-size:16px;
+}
+
+input:focus,
+select:focus{
+
+    outline:none;
+
+    border-color:var(--light-blue);
+}
+
+/* =========================
+   STUDENT INFO
+========================= */
+
+.student-info{
+
+    background:white;
+
+    margin:20px;
+
+    padding:20px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard{
+
+    padding:40px 20px;
+}
+
+.dashboard-title{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:2rem;
+}
+
+.stats{
+
+    display:flex;
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:25px;
+}
+
+.card{
+
+    flex:1;
+
+    min-width:250px;
+
+    background:white;
+
+    padding:25px;
+
+    text-align:center;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+}
+
+.card i{
+
+    color:var(--gold);
+
+    font-size:45px;
+
+    margin-bottom:15px;
+}
+
+.card h2{
+
+    color:var(--light-blue);
+
+    margin-bottom:10px;
+}
+
+/* =========================
+   TURNOUT BAR
+========================= */
+
+.turnout{
+
+    margin-top:30px;
+}
+
+.turnout-bar{
+
+    height:35px;
+
+    background:#ddd;
+
+    border-radius:50px;
+
+    overflow:hidden;
+}
+
+#turnoutFill{
+
+    height:100%;
+
+    width:0%;
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--gold),
+        var(--light-blue)
+    );
+
+    transition:1s;
+}
+
+/* =========================
+   CANDIDATES
+========================= */
+
+.candidates{
+
+    padding:60px 20px;
+}
+
+.candidates h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(300px,1fr)
+    );
+
+    gap:25px;
+}
+
+.candidate{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+}
+
+.candidate img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+}
+
+.candidate-content{
+
+    padding:20px;
+
+    text-align:center;
+}
+
+.candidate-content h3{
+
+    margin-bottom:10px;
+}
+
+.vote-btn{
+
+    margin-top:15px;
+}
+
+/* =========================
+   POSITION VOTING
+========================= */
+
+.position{
+
+    background:white;
+
+    padding:25px;
+
+    margin-bottom:20px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+}
+
+.position h2{
+
+    margin-bottom:15px;
+
+    color:var(--gold);
+}
+
+.position label{
+
+    display:block;
+
+    margin:10px 0;
+}
+
+.position input[type="radio"]{
+
+    width:auto;
+
+    margin-right:10px;
+}
+
+/* =========================
+   RESULTS
+========================= */
+
+.results{
+
+    padding:50px 20px;
+}
+
+.results h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+.result-card{
+
+    margin-bottom:25px;
+}
+
+.bar{
+
+    width:100%;
+
+    height:35px;
+
+    background:#ddd;
+
+    border-radius:50px;
+
+    overflow:hidden;
+}
+
+.fill{
+
+    width:0%;
+
+    height:100%;
+
+    background:var(--gold);
+
+    transition:1s;
+}
+
+/* =========================
+   LIVE RANKINGS
+========================= */
+
+.rankings{
+
+    background:white;
+
+    margin-top:40px;
+
+    padding:25px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+}
+
+.rankings h3{
+
+    margin-bottom:20px;
+}
+
+.rank-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #eee;
+}
+
+/* =========================
+   TABLES
+========================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+}
+
+table th{
+
+    background:var(--black);
+
+    color:white;
+
+    padding:15px;
+}
+
+table td{
+
+    padding:15px;
+
+    border-bottom:
+    1px solid #eee;
+}
+
+/* =========================
+   ADMIN DASHBOARD
+========================= */
+
+.admin-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(250px,1fr)
+    );
+
+    gap:25px;
+}
+
+.admin-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+}
+
+/* =========================
+   ALERTS
+========================= */
+
+.success{
+
+    background:#d4edda;
+
+    color:#155724;
+
+    padding:15px;
+
+    border-radius:10px;
+}
+
+.error{
+
+    background:#f8d7da;
+
+    color:#721c24;
+
+    padding:15px;
+
+    border-radius:10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:var(--black);
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:40px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1024px){
+
+    .overlay h1{
+        font-size:3rem;
+    }
+
+    .stats{
+        gap:15px;
+    }
+}
+
+@media(max-width:768px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .overlay h1{
+        font-size:2.5rem;
+    }
+
+    .overlay p{
+        font-size:1rem;
+    }
+
+    .register-container{
+
+        width:95%;
+
+        padding:25px;
+    }
+
+    .card{
+        min-width:100%;
+    }
+
+    .position{
+        padding:20px;
+    }
+}
+
+@media(max-width:480px){
+
+    .overlay h1{
+        font-size:2rem;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    button{
+        width:100%;
+    }
+
+    .candidate img{
+        height:220px;
+    }
+}
