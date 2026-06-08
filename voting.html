@@ -20,106 +20,60 @@ href="css/style.css">
 <body>
 
 <div class="student-info">
-
-<h2 id="studentDisplay"></h2>
-
+    <h2 id="studentDisplay"></h2>
+</div>
+<div class="position">
+    <h2>
+        Chairperson
+    </h2>
+    <label>
+        <input type="radio" name="chairperson" value="Sarah">
+        Sarah Mokoena
+    </label>
+    <label>
+        <input
+        type="radio" name="chairperson" value="David">
+        David Ndlovu
+    </label>
+        <label>
+        <input
+        type="radio" name="chairperson" value="Kabelo">
+        Kabelo Kekana
+    </label>
+        <label>
+        <input
+        type="radio" name="chairperson" value="Thabo">
+        Thabo Mokoena
+    </label>
 </div>
 
 <div class="position">
-
-<h2>
-Chairperson
-</h2>
-
-<label>
-
-<input
-type="radio"
-name="chairperson"
-value="Sarah">
-
-Sarah Mokoena
-
-</label>
-
-<label>
-
-<input
-type="radio"
-name="chairperson"
-value="David">
-
-David Ndlovu
-
-</label>
-
+    <h2>
+        Secretary
+    </h2>
+    <label>
+        <input type="radio" name="secretary" value="Michael"> 
+        Michael Sithole  
+    </label>
+    <label> 
+        <input type="radio" name="secretary" value="John"> John Khumalo 
+    </label>   
 </div>
 
-<div class="position">
-
-<h2>
-Secretary
-</h2>
-
-<label>
-
-<input
-type="radio"
-name="secretary"
-value="Michael">
-
-Michael Sithole
-
-</label>
-
-<label>
-
-<input
-type="radio"
-name="secretary"
-value="John">
-
-John Khumalo
-
-</label>
-
-</div>
-
-<button id="submitVote">
-
-Submit Vote
-
-</button>
-
+<button id="submitVote">Submit Vote</button>
 <div class="dashboard">
-
-<div class="card">
-
-<h2 id="liveRegistered">
-0
-</h2>
-
-<p>
-Registered Students
-</p>
-
+    <div class="card">
+        <h2 id="liveRegistered">0</h2>
+        <p>Registered Students</p>
+    </div>
+    <div class="card">
+        <h2 id="liveTurnout">0%
+        </h2>
+        <p>
+            Turnout
+        </p>
+    </div>
 </div>
-
-<div class="card">
-
-<h2 id="liveTurnout">
-0%
-</h2>
-
-<p>
-Turnout
-</p>
-
-</div>
-
-</div>
-
 <script src="js/app.js"></script>
 </body>
-
 </html>
